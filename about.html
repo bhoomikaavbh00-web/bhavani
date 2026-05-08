@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Bhavana S B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+        .skills-container {
+            margin-top: 2rem;
+        }
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .skill-bar {
+            height: 8px;
+            background: var(--secondary-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .skill-progress {
+            height: 100%;
+            background: var(--primary-color);
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BHAVANA S B</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">A bit about me.</h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+                            I am a Bachelor of Computer Applications student with a strong drive to learn and grow in the tech industry. I consider myself a responsible and orderly person, qualities that I bring to every project I undertake.
+                        </p>
+                        <p style="font-size: 1.1rem; color: var(--text-muted);">
+                            My goal is to leverage my technical skills in Java, Python, and C to solve real-world problems and contribute to innovative teams. I am currently looking forward to my first professional work experience.
+                        </p>
+                    </div>
+                    <div class="skills-section reveal">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <div class="skill-name"><span>Java</span><span>85%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name"><span>Python</span><span>80%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name"><span>C Programming</span><span>75%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name"><span>Web Development</span><span>70%</span></div>
+                                <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                            </div>
+                        </div>
+
+                        <h3 style="margin-top: 3rem;">Languages</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">English, Kannada</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bhavana S B. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Animate skill bars on reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach(bar => {
+                        bar.style.width = bar.getAttribute('data-width');
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        observer.observe(document.querySelector('.skills-section'));
+    </script>
+</body>
+</html>

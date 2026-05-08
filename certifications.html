@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications | Bhavana S B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .cert-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .cert-card:hover {
+            transform: scale(1.03);
+        }
+        .cert-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        .cert-placeholder {
+            border: 2px dashed var(--secondary-color);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            color: var(--text-muted);
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BHAVANA S B</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div style="max-width: 700px; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem;" class="reveal">Certifications</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted);" class="reveal">Professional achievements and specialized training I've completed to stay ahead in the field.</p>
+                </div>
+
+                <div class="certs-grid">
+                    <div class="cert-card reveal">
+                        <div class="cert-icon">📜</div>
+                        <h3>Python for Data Science</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Issued by Coursera / IBM</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+
+                    <div class="cert-card reveal">
+                        <div class="cert-icon">📜</div>
+                        <h3>Java Programming Masterclass</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">Issued by Udemy</p>
+                        <a href="#" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">View Certificate</a>
+                    </div>
+
+                    <div class="cert-placeholder reveal">
+                        <h3>More coming soon...</h3>
+                        <p>I am continuously learning and adding new skills to my repertoire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bhavana S B. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

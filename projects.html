@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Bhavana S B</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .project-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition);
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .project-img {
+            height: 200px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 1.5rem;
+            background-size: cover;
+            background-position: center;
+        }
+        .project-info {
+            padding: 2rem;
+        }
+        .project-info h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .tag {
+            background: var(--background-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .project-link {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">BHAVANA S B</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <div class="container">
+                <div style="max-width: 700px; margin-bottom: 4rem;">
+                    <h2 style="font-size: 3rem; margin-bottom: 1rem;" class="reveal">Selected Projects</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-muted);" class="reveal">A collection of academic and personal projects that showcase my technical skills and problem-solving abilities.</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card reveal">
+                        <div class="project-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800');">
+                            Code Editor
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Swing</span>
+                            </div>
+                            <h3>Personal Code Editor</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A lightweight text editor built using Java Swing with syntax highlighting for multiple languages.</p>
+                            <a href="#" class="project-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800');">
+                            Data Analysis
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                            </div>
+                            <h3>Sales Data Analyzer</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A tool to process and visualize sales performance metrics from CSV data using Python.</p>
+                            <a href="#" class="project-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal">
+                        <div class="project-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800');">
+                            Portfolio
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JS</span>
+                            </div>
+                            <h3>Professional Portfolio</h3>
+                            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A modern, responsive multi-page portfolio website designed with premium aesthetics and animations.</p>
+                            <a href="#" class="project-link">View Project &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bhavana S B. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
